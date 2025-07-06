@@ -124,6 +124,7 @@ in {
     echo "Waiting for ${graphics.socket} to appear"; while ! [ -S ${graphics.socket} ]; do
       sleep .1
     done
+    echo "${graphics.socket} detected"
   '';
 
   inherit supportsNotifySocket;
