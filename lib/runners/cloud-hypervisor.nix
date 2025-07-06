@@ -121,7 +121,7 @@ in {
       --wayland-sock $XDG_RUNTIME_DIR/$WAYLAND_DISPLAY \
       --params '${builtins.toJSON gpuParams}' \
       &
-    while ! [ -S ${graphics.socket} ]; do
+    echo "Waiting for ${graphics.socket} to appear"; while ! [ -S ${graphics.socket} ]; do
       sleep .1
     done
   '';
