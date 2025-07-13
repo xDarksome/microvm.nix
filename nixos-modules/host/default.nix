@@ -244,8 +244,8 @@ in
           TimeoutSec = 150;
           Restart = "always";
           RestartSec = "5s";
-          User = user;
-          Group = group;
+          User = "root";
+          Group = "root";
           SyslogIdentifier = "microvm@%i";
           LimitNOFILE = 1048576;
           NotifyAccess = "all";
