@@ -141,7 +141,7 @@ in {
         "--cpus" "boot=${toString vcpu}"
         "--watchdog"
         "--console" "null"
-        "--serial" "tty"
+        "--serial" "socket=/tmp/cloud-hypervisor-serial.sock"
         "--kernel" kernelPath
         "--initramfs" initrdPath
         "--cmdline" "${kernelConsole} reboot=t panic=-1 ${builtins.unsafeDiscardStringContext (toString microvmConfig.kernelParams)}"
